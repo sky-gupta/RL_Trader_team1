@@ -1,3 +1,6 @@
+## This file consists of the code for the environment, setting it up and registering it in gym_examples to make a call play it without stable baselines 3
+
+
 import gym
 from gym import spaces
 import numpy as np

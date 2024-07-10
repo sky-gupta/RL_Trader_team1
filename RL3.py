@@ -2,13 +2,10 @@
 
 
 import gym
-from gym import spaces
 import numpy as np
 import pandas as pd
 import numpy as np
 import pygame
-
-import gymnasium as gym
 from gymnasium import spaces
 from gymnasium import Env
 
@@ -80,44 +77,6 @@ class StockTradingEnv(gym.Env):
         print(f'Shares held: {self.shares_held}')
         print(f'Net worth: {self.net_worth}')
 
-
-# from stable_baselines3 import PPO
-# from stable_baselines3.common.env_checker import check_env
-
-# from stable_baselines3 import PPO
-# from stable_baselines3.common.vec_env import DummyVecEnv
-
-# # Load data
-# data = pd.read_csv("AAPL.csv")
-
-# # Create environment
-# env = StockTradingEnv(data)
-
-# # Wrap the environment
-# #env = DummyVecEnv([lambda: env])
-
-# # Check the environment
-# from stable_baselines3.common.env_checker import check_env
-# check_env(env)
-
-# # Train the model
-# model = PPO("MlpPolicy", env, verbose=1)
-# model.learn(total_timesteps=10000)
-
-# # Save the model
-# model.save("ppo_stock_trading")
-
-# # Load the model
-# model = PPO.load("ppo_stock_trading")
-
-# # Test the trained model
-# obs = env.reset()
-# for i in range(len(data)):
-#     action, _ = model.predict(obs)
-#     obs, reward, done, info = env.step(action)
-#     env.render()
-#     if done:
-#         break
 
 from gymnasium.envs.registration import register
 
